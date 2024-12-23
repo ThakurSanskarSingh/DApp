@@ -15,6 +15,7 @@ import { clusterApiUrl } from '@solana/web3.js';
 import '@solana/wallet-adapter-react-ui/styles.css';
 
 import './App.css'
+import { Balance } from './Balance';
 
 function App() {
    const endpoint = 'https://solana-devnet.g.alchemy.com/v2/jj-nP5131CJpHvj_piXoKPWVHjkOAu99'
@@ -26,8 +27,9 @@ function App() {
             <WalletProvider wallets={[]} autoConnect>
                 <WalletModalProvider>
                  <WalletMultiButton></WalletMultiButton>
-                  <WalletDisconnectButton> </WalletDisconnectButton>
+                 
                   <Airdrop></Airdrop>
+                  <Balance />
                                      
                 </WalletModalProvider>
             </WalletProvider>
