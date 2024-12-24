@@ -1,4 +1,5 @@
 import { useConnection, useWallet } from '@solana/wallet-adapter-react'
+import { LAMPORTS_PER_SOL } from '@solana/web3.js'
 import React, { useState } from 'react'
 
 export const Airdrop = () => {
@@ -15,7 +16,7 @@ export const Airdrop = () => {
         try {
             const airdropSignature = await connection.requestAirdrop(
                 wallet.publicKey,
-                amount * 1_000_000_000 
+                amount * LAMPORTS_PER_SOL 
             );
 
            

@@ -11,7 +11,6 @@ import {
 } from '@solana/wallet-adapter-react-ui';
 import { clusterApiUrl } from '@solana/web3.js';
 
-// Default styles that can be overridden by your app
 import '@solana/wallet-adapter-react-ui/styles.css';
 
 import './App.css'
@@ -19,7 +18,7 @@ import { Balance } from './Balance';
 import { SendTransaction } from './SendTransaction';
 
 function App() {
-   const endpoint = 'https://solana-devnet.g.alchemy.com/v2/jj-nP5131CJpHvj_piXoKPWVHjkOAu99'
+   const endpoint = 'https://api.devnet.solana.com'
  
 
   return (
@@ -27,11 +26,14 @@ function App() {
      <ConnectionProvider endpoint={endpoint}>
             <WalletProvider wallets={[]} autoConnect>
                 <WalletModalProvider>
-                 <WalletMultiButton></WalletMultiButton>
-                 
+                  <div  style={{width : '100vw', display : 'flex' , justifyContent : 'center'}}>
+
+                 <WalletMultiButton />
+                 <WalletDisconnectButton />                 
                   <Airdrop></Airdrop>
                   <Balance />
                   <SendTransaction /> 
+                  </div>
                 </WalletModalProvider>
             </WalletProvider>
         </ConnectionProvider>
