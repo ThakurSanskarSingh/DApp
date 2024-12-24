@@ -16,6 +16,7 @@ import '@solana/wallet-adapter-react-ui/styles.css';
 
 import './App.css'
 import { Balance } from './Balance';
+import { SendTransaction } from './SendTransaction';
 
 function App() {
    const endpoint = 'https://solana-devnet.g.alchemy.com/v2/jj-nP5131CJpHvj_piXoKPWVHjkOAu99'
@@ -30,7 +31,7 @@ function App() {
                  
                   <Airdrop></Airdrop>
                   <Balance />
-                                     
+                  <SendTransaction /> 
                 </WalletModalProvider>
             </WalletProvider>
         </ConnectionProvider>

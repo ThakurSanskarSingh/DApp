@@ -43,7 +43,7 @@ export const Balance = () => {
 
     return (
         <div>
-            <h3>Balance: {balance}</h3>
+            <h5>Balance: {balance}</h5>
             <button onClick={fetchBalance}>Refresh Balance</button>
         </div>
     );
