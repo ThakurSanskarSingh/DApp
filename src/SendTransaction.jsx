@@ -14,12 +14,14 @@ export const  SendTransaction =  () => {
     let amount= document.getElementById('amount').value
 
     const transaction = new Transaction()
+    //below thing creates a trancaction
     transaction.add(SystemProgram.transfer({
         fromPubkey : wallet.publicKey,
         toPubkey : new PublicKey(to),
         lamports : amount * LAMPORTS_PER_SOL
         
     }))
+    //below line is requesting the transaaction
     await wallet.sendTransaction(transaction,connection);
     alert(`Sent ${amount} sol to ${to}`)
     }
