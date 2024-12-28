@@ -26,17 +26,22 @@ function App() {
     <>
      <ConnectionProvider endpoint={endpoint}>
             <WalletProvider wallets={[]} autoConnect>
-                <WalletModalProvider>
-                  <div  style={{width : '100vw', display : 'flex' , justifyContent : 'center'}}>
-
-                 <WalletMultiButton />
-                 <WalletDisconnectButton />                 
-                  <Airdrop></Airdrop>
-                  <Balance />
-                  <SendTransaction /> 
-                  <SignMessage />
-                  </div>
-                </WalletModalProvider>
+            <WalletModalProvider>
+      <div className="min-h-screen bg-gray-900 py-8">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="flex justify-end gap-2 mb-6">
+            <WalletMultiButton />
+            <WalletDisconnectButton />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Airdrop />
+            <Balance />
+            <SendTransaction />
+            <SignMessage />
+          </div>
+        </div>
+      </div>
+    </WalletModalProvider>
             </WalletProvider>
         </ConnectionProvider>
 

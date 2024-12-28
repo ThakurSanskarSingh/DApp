@@ -29,14 +29,23 @@ export const Airdrop = () => {
     }
 
     return (
-        <div>
-            <input
-                type="number"
-                placeholder="Amount"
-                value={amount}
-                onChange={(e) => setAmount(Number(e.target.value))}
-            />
-            <button onClick={sendAirdropToUser}>Send Airdrop</button>
-        </div>
+        <div className="p-4 bg-gray-800 rounded-lg shadow-lg border border-gray-700">
+    <h3 className="text-lg font-semibold mb-3 text-gray-200">Request Airdrop</h3>
+    <div className="flex gap-2">
+      <input
+        type="number"
+        placeholder="Amount"
+        value={amount}
+        onChange={(e) => setAmount(Number(e.target.value))}
+        className="flex-1 p-2 bg-gray-700 text-gray-200 border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-violet-500 placeholder-gray-400"
+      />
+      <button
+        onClick={sendAirdropToUser}
+        className="bg-violet-600 text-gray-200 px-4 py-2 rounded hover:bg-violet-700 transition-colors"
+      >
+        Send Airdrop
+      </button>
+    </div>
+  </div>
     )
 }

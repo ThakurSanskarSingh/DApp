@@ -49,9 +49,16 @@ export const Balance = () => {
     }, [wallet.publicKey]);
 
     return (
-        <div>
-            <h5>Balance: {balance}</h5>
-            <button onClick={fetchBalance}>Refresh Balance</button>
+        <div className="p-4 bg-gray-800 rounded-lg shadow-lg border border-gray-700">
+        <div className="flex items-center justify-between">
+          <h5 className="text-lg font-semibold text-gray-200">Balance: {balance}</h5>
+          <button
+            onClick={fetchBalance}
+            className="bg-emerald-600 text-gray-200 px-4 py-2 rounded hover:bg-emerald-700 transition-colors"
+          >
+            Refresh Balance
+          </button>
         </div>
+      </div>
     );
 };

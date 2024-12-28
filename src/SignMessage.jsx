@@ -23,8 +23,23 @@ import bs58 from 'bs58'
 
     return (
         <>
-        <input type="text" placeholder="message" id="message" />
-        <button onClick={onClick}>Sign Message</button>
+       <div className="p-4 bg-gray-800 rounded-lg shadow-lg border border-gray-700">
+    <h3 className="text-lg font-semibold mb-3 text-gray-200">Sign Message</h3>
+    <div className="flex gap-2">
+      <input
+        type="text"
+        placeholder="Message"
+        id="message"
+        className="flex-1 p-2 bg-gray-700 text-gray-200 border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500 placeholder-gray-400"
+      />
+      <button
+        onClick={onClick}
+        className="bg-cyan-600 text-gray-200 px-4 py-2 rounded hover:bg-cyan-700 transition-colors"
+      >
+        Sign Message
+      </button>
+    </div>
+  </div>
         </>
     )
  }
