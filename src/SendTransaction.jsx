@@ -21,14 +21,11 @@ export const  SendTransaction =  () => {
         lamports : amount * LAMPORTS_PER_SOL
         
     }))
-    //below line is requesting the transaaction
+    //below line is requesting the transaction
     await wallet.sendTransaction(transaction,connection);
     alert(`Sent ${amount} sol to ${to}`)
     }
-
-
-
-    
+   
 
   return (
     <div className="p-4 bg-gray-800 rounded-lg shadow-lg border border-gray-700">
