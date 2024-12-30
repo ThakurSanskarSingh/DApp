@@ -18,9 +18,12 @@ import bs58 from 'bs58'
 
 
     }
+    //Take the message 
+    //encode the messags
+    //create signature of the encodedMessage  using signMessage of Wallet
+    //verify signature,encodecMessage using publickey by Ed25519 program
         
     
-
     return (
         <>
        <div className="p-4 bg-gray-800 rounded-lg shadow-lg border border-gray-700">
